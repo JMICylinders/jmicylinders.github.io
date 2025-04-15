@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HIRA Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>HIRA Dashboard</h1>
+  </header>
+
+  <div class="dropdown-container">
+    <!-- Department Dropdown -->
+    <div class="dropdown">
+      <label for="departmentSelect">Select a Department:</label>
+      <select id="departmentSelect" onchange="onDepartmentChange()">
+        <option value="">Select Department</option>
+        <option value="engineering">Engineering</option>
+        <option value="quality">Quality</option>
+        <option value="scm_and_admin">SCM & Admin</option>
+        <option value="jsatl">JSATL</option>
+        <!-- Add more departments if needed -->
+      </select>
+    </div>
+  
+    <!-- Machine Dropdown -->
+    <div class="dropdown">
+      <label for="machineSelect">Select a Machine:</label>
+      <select id="machineSelect" onchange="updateData()">
+        <!-- Dynamically populated -->
+      </select>
+    </div>
+  </div>
+
+    <!-- Images -->
+    <div class="image-container">
+      <div id="machineImage" class="image-box"></div>
+      <div id="riskMatrixImage" class="image-box"></div>
+    </div>
+
+    <!-- HIRA Table -->
+    <h2>Hazard Identification and Risk Assessment</h2>
+    <table id="hazardTable">
+      <thead>
+        <tr>
+          <th>Machine</th>
+          <th>Process</th>
+          <th>Specific Hazard</th>
+          <th>Perceived Risk</th>
+          <th>Severity</th>
+          <th>Likelihood</th>
+          <th>Risk Rating</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Control Measures Table -->
+    <h2>Current Control Measures</h2>
+    <table id="controlMeasuresTable">
+      <thead>
+        <tr>
+          <th>Machine</th>
+          <th>Perceived Risk</th>
+          <th>Required New Control</th>
+          <th>Responsibility</th>
+          <th>Time Frame</th>
+          <th>Severity (N)</th>
+          <th>Likelihood (N)</th>
+          <th>Risk</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

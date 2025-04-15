@@ -1,0 +1,162 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #4CAF50;
+  }
+  
+  /* Flex container for dropdowns */
+  .dropdown-container {
+    display: flex;
+    justify-content: space-between; /* Align items evenly spaced */
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .dropdown {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%; /* Allow the dropdowns to take up roughly half of the container */
+  }
+  
+  select {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%; /* Make the dropdown take full width */
+    max-width: 250px; /* Ensure the dropdown is not too wide */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  select:hover {
+    border-color: #4CAF50;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .image-box {
+    width: 48%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #e7f3e7;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    /* Stack the dropdowns vertically */
+    .dropdown-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* Smaller gap between the dropdowns on small screens */
+    }
+  
+    .dropdown {
+      width: 80%; /* Allow dropdown to take up more space on small screens */
+    }
+  
+    .image-container {
+      flex-direction: column;
+      align-items: center; /* Stack images vertically */
+    }
+  
+    .image-box {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    select {
+      width: 100%; /* Ensure the dropdown takes full width */
+    }
+  
+    th, td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    /* Adjust table width for smaller screens */
+    table {
+      width: 90%; /* Ensure table fits in smaller viewports */
+    }
+  }
+  
