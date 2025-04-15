@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu Hub - Training Materials</title>
+    <link rel="stylesheet" href="style.css">  <!-- External CSS File -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="https://mdtowfiq30.github.io/jmi_ohs/" class="navbar-link">JMI OHS</a>
+    </nav>
+
+    <!-- Edu Hub Section -->
+    <section id="edu-hub">
+        <h2>Edu Hub - Training Materials</h2>
+
+        <!-- Dropdown for selecting training material -->
+        <div class="pdf-container">
+            <label for="pdf-select">Select Training Material:</label>
+            <select id="pdf-select">
+                <option value="Forklift safety">Forklift Safety Training</option>
+                <option value="training/work_at_height">Work at Height Training</option>
+            </select>
+        </div>
+
+        <!-- PDF/HTML Viewer -->
+        <div id="viewer-container"></div>
+    </section>
+
+    <script src="script.js"></script> <!-- External JavaScript File -->
+</body>
+</html>
