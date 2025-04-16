@@ -8,7 +8,7 @@
 /* Body Styling with Watermark */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: url("/assets/img/jmi_arial\ .jpg") no-repeat center center fixed;
+  background: url("/assets/img/jmi_arial .jpg") no-repeat center center fixed;
   background-size: cover;
   backdrop-filter: blur(4px);
   height: 100vh;
