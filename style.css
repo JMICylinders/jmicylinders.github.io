@@ -1,0 +1,84 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling with Watermark */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("/assets/img/jmi_arial\ .jpg") no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Container Styling */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+.login-container h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Input Fields Styling */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+/* Button Styling */
+.login-container button {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #004d40;
+}
+
+/* Error Message Styling */
+#error-message {
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+  max-width: 320px;
+  text-align: center;
+}
