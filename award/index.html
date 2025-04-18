@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Safety Award Recognition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🎖️ Safety Award Recognition</h1>
+
+  <div class="filters">
+    <select id="year-filter">
+      <option value="all">Select Year</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+    </select>
+
+    <select id="month-filter">
+      <option value="all">Select Month</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+  </div>
+
+  <div class="card-container" id="awardees">
+
+    <!-- March 2025 Awardee -->
+    <div class="award-card" data-year="2025" data-month="March">
+      <img src="jmi_arial .jpg" alt="Md Towfiq Elahi" />
+      <h3>Md Towfiq Elahi</h3>
+      <p><strong>Designation:</strong> Safety Officer</p>
+      <p><strong>Department:</strong> Health & Safety</p>
+      <p>For consistent enforcement of PPE rules and initiating a safety awareness campaign among new workers.</p>
+      <div class="award-type">Best Safe Performer - March 2025</div>
+    </div>
+
+    <!-- April 2025 Awardee -->
+    <div class="award-card" data-year="2025" data-month="April">
+      <img src="https://via.placeholder.com/180" alt="Jannatul Ferdous" />
+      <h3>Jannatul Ferdous</h3>
+      <p><strong>Designation:</strong> Fire Safety Coordinator</p>
+      <p><strong>Department:</strong> Fire & Emergency</p>
+      <p>For her quick response during fire drill and ensuring all areas were evacuated in under 4 minutes.</p>
+      <div class="award-type">Zero Incident Award - April 2025</div>
+    </div>
+
+    <!-- Add more awardees below with correct year/month -->
+    
+  </div>
+
+  <script>
+    const yearFilter = document.getElementById('year-filter');
+    const monthFilter = document.getElementById('month-filter');
+    const cards = document.querySelectorAll('.award-card');
+  
+    // Hide all cards initially
+    cards.forEach(card => card.style.display = 'none');
+  
+    function filterCards() {
+      const year = yearFilter.value;
+      const month = monthFilter.value;
+  
+      cards.forEach(card => {
+        const cardYear = card.getAttribute('data-year');
+        const cardMonth = card.getAttribute('data-month');
+  
+        const showCard = year !== 'all' && month !== 'all' &&
+          cardYear === year && cardMonth === month;
+  
+        card.style.display = showCard ? 'block' : 'none';
+      });
+    }
+  
+    yearFilter.addEventListener('change', filterCards);
+    monthFilter.addEventListener('change', filterCards);
+  </script>
+  
+
+</body>
+</html>
