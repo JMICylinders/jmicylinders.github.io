@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Injury Markers with Heatmap</title>
+    <link rel="stylesheet" href="jsatl.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Accident Report - Plant Layout</h1>
+
+        <!-- Plant Selection Buttons -->
+        <div class="button-container">
+            <button onclick="location.href='../index.html'">JCL</button>
+            <button onclick="location.href='jsatl.html'">JSATL</button>
+        </div>
+
+        <label for="month">Select Month:</label>
+        <select id="month">
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+        </select>
+
+        <button id="toggleHeatmap">Toggle Heatmap</button>
+        <h1>JSATL Plant</h1>
+
+
+        <div class="image-container">
+            <img src="../images/JSATL.png" alt="Workplace" class="background-image">
+        </div>
+    </div>
+
+    <script src="jsatl.js"></script>
+</body>
+</html>
