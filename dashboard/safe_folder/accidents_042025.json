@@ -1,0 +1,156 @@
+{
+  "month": "April 2025",
+  "summary": {
+    "total_incidents": 15,
+    "ltifr": 1.2,
+    "near_miss_reports": 25,
+    "safety_trainings_conducted": 5
+  },
+  "incident_trend": [
+    { "day": 1, "incidents": 0 },
+    { "day": 2, "incidents": 1 },
+    { "day": 5, "incidents": 1 },
+    { "day": 8, "incidents": 1 },
+    { "day": 12, "incidents": 3 },
+    { "day": 15, "incidents": 2 },
+    { "day": 16, "incidents": 1 },
+    { "day": 17, "incidents": 0 },
+    { "day": 18, "incidents": 2 },
+    { "day": 20, "incidents": 3 },
+    { "day": 22, "incidents": 1 },
+    { "day": 23, "incidents": 1 },
+    { "day": 24, "incidents": 2 },
+    { "day": 25, "incidents": 1 },
+    { "day": 30, "incidents": 1 }
+  ],
+  "incident_reports": [
+    {
+      "date": "2025-04-02",
+      "incident_type": "Hand Injury",
+      "category": "Hand",
+      "location": "Forming",
+      "severity": "Minor",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-05",
+      "incident_type": "Impact from Equipment",
+      "category": "Impact",
+      "location": "Welding",
+      "severity": "Major",
+      "status": "Investigation"
+    },
+    {
+      "date": "2025-04-12",
+      "incident_type": "Foot Crush Incident",
+      "category": "Chemical",
+      "location": "Quality",
+      "severity": "Major",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-15",
+      "incident_type": "Chemical Exposure",
+      "category": "Chemical Exposure",
+      "location": "Painting",
+      "severity": "Major",
+      "status": "Under Observation"
+    },
+    {
+      "date": "2025-04-20",
+      "incident_type": "Eye Injury from Debris",
+      "category": "Eye Injury",
+      "location": "Workshop",
+      "severity": "Minor",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-01",
+      "incident_type": "Burn Injury",
+      "category": "Burn",
+      "location": "Smelting",
+      "severity": "Major",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-03",
+      "incident_type": "Slip on Wet Floor",
+      "category": "Slip",
+      "location": "Warehouse",
+      "severity": "Minor",
+      "status": "Investigation"
+    },
+    {
+      "date": "2025-04-06",
+      "incident_type": "Falling Object Injury",
+      "category": "Fall",
+      "location": "Loading Bay",
+      "severity": "Moderate",
+      "status": "Under Observation"
+    },
+    {
+      "date": "2025-04-09",
+      "incident_type": "Electric Shock",
+      "category": "Electrical",
+      "location": "Maintenance",
+      "severity": "Major",
+      "status": "Investigation"
+    },
+    {
+      "date": "2025-04-10",
+      "incident_type": "Sprain",
+      "category": "Sprain",
+      "location": "Assembly Line",
+      "severity": "Minor",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-14",
+      "incident_type": "Gas Leak",
+      "category": "Chemical Exposure",
+      "location": "Storage",
+      "severity": "Major",
+      "status": "Investigation"
+    },
+    {
+      "date": "2025-04-16",
+      "incident_type": "Laceration",
+      "category": "Laceration",
+      "location": "Warehouse",
+      "severity": "Minor",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-18",
+      "incident_type": "Back Injury",
+      "category": "Back",
+      "location": "Shipping",
+      "severity": "Moderate",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-19",
+      "incident_type": "Heavy Equipment Accident",
+      "category": "Impact",
+      "location": "Construction",
+      "severity": "Major",
+      "status": "Investigation"
+    },
+    {
+      "date": "2025-04-22",
+      "incident_type": "Forklift Collision",
+      "category": "Impact",
+      "location": "Storage Area",
+      "severity": "Moderate",
+      "status": "Closed"
+    },
+    {
+      "date": "2025-04-25",
+      "incident_type": "Noise-Induced Hearing Loss",
+      "category": "Hearing",
+      "location": "Machining",
+      "severity": "Minor",
+      "status": "Closed"
+    }
+  ]
+}
