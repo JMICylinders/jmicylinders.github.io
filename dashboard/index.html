@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safety Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Safety Dashboard</h1>
+
+  <!-- Dropdown for Month Selection -->
+  <div class="month-selection">
+    <label for="month-select">Select Month:</label>
+    <select id="month-select">
+      <option value="04">April</option>
+      <option value="05">May</option>
+      <option value="06">June</option>
+    </select>
+  </div>
+  
+
+  <div class="kpis">
+    <div class="kpi">
+      <h2>Total Incidents This Month</h2>
+      <p id="total-incidents">0</p>
+    </div>
+    <div class="kpi">
+      <h2>Lost Time Injury Frequency Rate</h2>
+      <p id="ltifr">0</p>
+    </div>
+    <div class="kpi">
+      <h2>Near Miss Reports</h2>
+      <p id="near-misses">0</p>
+    </div>
+    <div class="kpi">
+      <h2>Safety Trainings Conducted</h2>
+      <p id="trainings">0</p>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <h2>Incident Trend Over Days</h2>
+    <canvas id="incident-trend"></canvas>
+  </div>
+  
+  <div class="chart-section">
+    <h2>Histogram of Injury Categories</h2>
+    <canvas id="category-histogram"></canvas>
+  </div>
+  
+  <div class="chart-section">
+    <canvas id="grouped-bar-chart" width="400" height="200"></canvas>
+ </div>
+  
+
+  <div class="table-section">
+    <h2>Incident Reports</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Category</th>
+          <th>Location</th>
+          <th>Severity</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic rows will be inserted here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
