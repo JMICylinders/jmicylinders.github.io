@@ -21,9 +21,33 @@ def index():
         }
 
         response = requests.post(API_URL, data=payload)
-        return render_template("index.html", status=response.text)
+
+        if response.status_code == 200:
+            return render_template("index.html", status="Message sent successfully!")
+        else:
+            return render_template("index.html", status="Failed to send message. Try again!")
 
     return render_template("index.html", status=None)
+
+# This is the endpoint for your backend API to receive SMS requests
+@app.route("/send", methods=["POST"])
+def send_sms():
+    number = request.form["number"]
+    message = request.form["message"]
+
+    payload = {
+        "api_key": API_KEY,
+        "senderid": SENDER_ID,
+        "number": number,
+        "message": message
+    }
+
+    response = requests.post(API_URL, data=payload)
+
+    if response.status_code == 200:
+        return jsonify({"status": "Message sent successfully!"}), 200
+    else:
+        return jsonify({"status": "Failed to send message."}), 400
 
 if __name__ == "__main__":
     app.run(debug=True)
