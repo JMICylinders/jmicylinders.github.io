@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send SMS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Send Test SMS</h2>
+        <form method="POST">
+            <label for="number">Recipient Number:</label>
+            <input type="text" id="number" name="number" value="+8801725692402" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required>This is a demo message from your PPE system.</textarea>
+
+            <button type="submit">Send SMS</button>
+        </form>
+
+        {% if status %}
+            <div class="status">
+                <strong>Response:</strong> {{ status }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
