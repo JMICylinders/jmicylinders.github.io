@@ -1,106 +1,116 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
-    background-color: #f6f6f2;
-    color: #333;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: #f6f6f2;
+  color: #333;
+}
+
 /* Dropdown Styling */
 .month-selection {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .month-selection label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 10px;
-    color: #333;
-  }
-  
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-  
-  .month-selection select {
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    border: 2px solid #007BFF;
-    border-radius: 12px;
-    background-color: #ffffff;
-    color: #333;
-    outline: none;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-  }
-  
-  .month-selection select:focus {
-    border-color: #0056b3;
-    box-shadow: 0 0 5px rgba(0, 91, 179, 0.5);
-  }
-  
+.month-selection label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333;
+}
 
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .kpis {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-  
-  .kpi {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    flex: 1 1 200px;
-    text-align: center;
-  }
-  
-  .kpi h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .kpi p {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .chart-section {
-    max-width: 800px;
-    margin: 0 auto 40px;
-  }
-  
-  .table-section {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
+.month-selection select {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #007BFF;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.month-selection select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 91, 179, 0.5);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.kpis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.kpi {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.kpi h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.kpi p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chart-section {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.table-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 600px; /* Helps enable scroll on small screens */
+}
+
+thead {
+  background-color: #007BFF;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Optional: Smaller font size on narrow screens */
+@media screen and (max-width: 600px) {
   table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 14px;
   }
-  
-  thead {
-    background-color: #007BFF;
-    color: white;
-  }
-  
-  th, td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  tbody tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+}
