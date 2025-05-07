@@ -51,4 +51,16 @@
   .section-list li:hover {
     background: #e0e0e0;
   }
-  
+  @media (max-width: 768px) {
+  .course-layout {
+    flex-direction: column;
+  }
+
+  .video-section {
+    padding-bottom: 56.25%; /* keeps aspect ratio */
+  }
+
+  .section-list {
+    margin-top: 1.5rem;
+  }
+}
