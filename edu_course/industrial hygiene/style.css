@@ -7,19 +7,20 @@
     margin: auto;
   }
   
-  .video-section {
-    flex: 2;
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-  }
-  
-  .video-section iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+.video-section {
+  flex: 2;
+  aspect-ratio: 16 / 9; /* Use modern CSS for aspect ratio */
+  max-height: 500px;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
   
   .section-list {
     flex: 1;
