@@ -1,0 +1,54 @@
+.course-layout {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .video-section {
+    flex: 2;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+  
+  .video-section iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .section-list {
+    flex: 1;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+  
+  .section-list h3 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .section-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .section-list li {
+    background: #f4f4f4;
+    margin-bottom: 0.8rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .section-list li:hover {
+    background: #e0e0e0;
+  }
+  

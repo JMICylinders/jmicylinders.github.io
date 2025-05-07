@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Industrial Hygiene Course</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <h1>🧪 Introduction to Industrial Hygiene</h1>
+    <p class="tagline">Explore chemical, biological, and physical hazards in the workplace</p>
+  </header>
+
+  <main class="course-layout">
+    <div class="video-section">
+      <iframe id="courseVideo" src="https://drive.google.com/file/d/1rk-F0HUg6w6WEBgGjJLwrETfLi53fvTC/preview" allow="autoplay" allowfullscreen></iframe>
+    </div>
+
+    <aside class="section-list">
+      <h3>Course Sections</h3>
+      <ul>
+        <li onclick="changeVideo('1rk-F0HUg6w6WEBgGjJLwrETfLi53fvTC')">📌 Introduction</li>
+        <li onclick="changeVideo('1rk-F0HUg6w6WEBgGjJLwrETfLi53fvTC')">🧪 Chemical Hazards</li>
+        <li onclick="changeVideo('1rk-F0HUg6w6WEBgGjJLwrETfLi53fvTC')">🦠 Biological Hazards</li>
+        <li onclick="changeVideo('1rk-F0HUg6w6WEBgGjJLwrETfLi53fvTC')">🎧 Hearing Protection</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script>
+    function changeVideo(videoId) {
+      const iframe = document.getElementById('courseVideo');
+      iframe.src = `https://drive.google.com/file/d/${videoId}/preview`;
+    }
+  </script>
+</body>
+</html>
