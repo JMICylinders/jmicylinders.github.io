@@ -6,7 +6,7 @@ import gdown
 st.set_page_config(page_title="Safety Shoe Status", page_icon="👞", layout="centered")
 
 # Load Data from Google Drive
-url = "https://docs.google.com/spreadsheets/d/1VB__QSZM3xOFzml86_9mHXmPLMbOdCE-/export?format=xlsx"
+url = 
 output = "safety_shoe.xlsx"
 gdown.download(url, output, quiet=False)
 
