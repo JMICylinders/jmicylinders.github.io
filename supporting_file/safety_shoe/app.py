@@ -90,6 +90,15 @@ try:
     # Title
     st.markdown("<h1>👞 Personal Protective Equipment Status Checker</h1>", unsafe_allow_html=True)
 
+    # Show Title and Current Date (BD Time)
+    bd_time = datetime.now(timezone.utc) + timedelta(hours=6)
+    formatted_date = bd_time.strftime("%d %B, %Y")
+
+    st.markdown(f"""
+        <h1>👞 Personal Protective Equipment Status Checker</h1>
+        <h3 style='text-align: center; color: #7f8c8d;'>📅 আজকের তারিখ: {formatted_date}</h3>
+    """, unsafe_allow_html=True)
+
     # Search Box
     emp_id = st.text_input("🔍 Enter Employee ID:", "")
     st.write("")
@@ -145,4 +154,5 @@ try:
 except Exception as e:
     st.error("❌ Failed to load data from Google Sheets.")
     st.exception(e)
+
 
