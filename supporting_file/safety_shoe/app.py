@@ -102,7 +102,20 @@ try:
             filtered_df = filtered_df[filtered_df["ID"].notna() & (filtered_df["ID"] != "")]
             if not filtered_df.empty:
                 st.markdown("<h3>Employee PPE Information</h3>", unsafe_allow_html=True)
-                st.dataframe(filtered_df.style.set_properties(**{'text-align': 'center'}), height=400, use_container_width=True)
+
+                # Convert 'Date' to datetime
+                filtered_df["Date"] = pd.to_datetime(filtered_df["Date"], errors="coerce")
+
+                # Calculate duration
+                today = pd.Timestamp.today().normalize()
+                filtered_df["Duration"] = (today - filtered_df["Date"]).dt.days.astype("Int64")
+
+                # Slice columns from 'ID' to 'Date' then add 'Duration'
+                id_to_date = filtered_df.loc[:, "ID":"Date"]
+                display_df = pd.concat([id_to_date, filtered_df[["Duration"]]], axis=1)
+
+                # Display result
+                st.dataframe(display_df.style.set_properties(**{'text-align': 'center'}), height=400, use_container_width=True)
             else:
                 st.error("❌ Employee ID not found! Please check and try again.")
         else:
