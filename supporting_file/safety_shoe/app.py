@@ -88,8 +88,6 @@ try:
         unsafe_allow_html=True,
     )
 
-    # Title
-    st.markdown("<h1>👞 Personal Protective Equipment Status Checker</h1>", unsafe_allow_html=True)
 
     # Show Title and Current Date (BD Time)
     bd_time = datetime.now(timezone.utc) + timedelta(hours=6)
