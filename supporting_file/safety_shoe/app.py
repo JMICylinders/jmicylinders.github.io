@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 import io
 import time
+from dateutil.relativedelta import relativedelta
 
 # Clear Streamlit's cache to force fresh data every run
 st.cache_data.clear()
@@ -106,9 +107,14 @@ try:
                 # Convert 'Date' to datetime
                 filtered_df["Date"] = pd.to_datetime(filtered_df["Date"], errors="coerce")
 
-                # Calculate duration
+                # Calculate duration in years, months, days
                 today = pd.Timestamp.today().normalize()
-                filtered_df["Duration"] = (today - filtered_df["Date"]).dt.days.astype("Int64")
+                filtered_df["Duration"] = filtered_df["Date"].apply(lambda x: relativedelta(today, x))
+
+                # Format duration as 'X years X months X days'
+                filtered_df["Duration"] = filtered_df["Duration"].apply(
+                    lambda x: f"{x.years} years {x.months} months {x.days} days"
+                )
 
                 # Slice columns from 'ID' to 'Date' then add 'Duration'
                 id_to_date = filtered_df.loc[:, "ID":"Date"]
