@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 import io
 import time
+from datetime import datetime, timezone, timedelta
 from dateutil.relativedelta import relativedelta
 
 # Clear Streamlit's cache to force fresh data every run
@@ -21,7 +22,7 @@ try:
 
     # Strip column names and drop unwanted columns
     df.columns = df.columns.str.strip()
-    df = df.drop(columns=["Status", "Comment"])
+    original_df = df.copy()  # Preserve original before filtering
 
     # --- Custom CSS Styling ---
     st.markdown(
@@ -87,8 +88,14 @@ try:
         unsafe_allow_html=True,
     )
 
-    # Title
-    st.markdown("<h1>👞 Personal Protective Equipment Status Checker</h1>", unsafe_allow_html=True)
+    # Show Title and Current Date (BD Time)
+    bd_time = datetime.now(timezone.utc) + timedelta(hours=6)
+    formatted_date = bd_time.strftime("%d %B, %Y")
+
+    st.markdown(f"""
+        <h1>👞 Personal Protective Equipment Status Checker</h1>
+        <h3 style='text-align: center; color: #7f8c8d;'>📅 আজকের তারিখ: {formatted_date}</h3>
+    """, unsafe_allow_html=True)
 
     # Search Box
     emp_id = st.text_input("🔍 Enter Employee ID:", "")
@@ -99,29 +106,26 @@ try:
 
     if submit:
         if emp_id:
-            filtered_df = df[df["ID"].astype(str).str.strip() == emp_id.strip()]
+            filtered_df = original_df[original_df["ID"].astype(str).str.strip() == emp_id.strip()]
             filtered_df = filtered_df[filtered_df["ID"].notna() & (filtered_df["ID"] != "")]
+
             if not filtered_df.empty:
+                # Add "Duration" column if "Date" column exists
+                if "Date" in filtered_df.columns:
+                    def calc_duration(row):
+                        try:
+                            if pd.isnull(row["Date"]):
+                                return ""
+                            start_date = pd.to_datetime(row["Date"])
+                            delta = relativedelta(bd_time.date(), start_date.date())
+                            return f"{delta.years*12 + delta.months} months {delta.days} days"
+                        except:
+                            return ""
+
+                    filtered_df["Duration"] = filtered_df.apply(calc_duration, axis=1)
+
                 st.markdown("<h3>Employee PPE Information</h3>", unsafe_allow_html=True)
-
-                # Convert 'Date' to datetime
-                filtered_df["Date"] = pd.to_datetime(filtered_df["Date"], errors="coerce")
-
-                # Calculate duration in years, months, days
-                today = pd.Timestamp.today().normalize()
-                filtered_df["Duration"] = filtered_df["Date"].apply(lambda x: relativedelta(today, x))
-
-                # Format duration as 'X years X months X days'
-                filtered_df["Duration"] = filtered_df["Duration"].apply(
-                    lambda x: f"{x.years} years {x.months} months {x.days} days"
-                )
-
-                # Slice columns from 'ID' to 'Date' then add 'Duration'
-                id_to_date = filtered_df.loc[:, "ID":"Date"]
-                display_df = pd.concat([id_to_date, filtered_df[["Duration"]]], axis=1)
-
-                # Display result
-                st.dataframe(display_df.style.set_properties(**{'text-align': 'center'}), height=400, use_container_width=True)
+                st.dataframe(filtered_df.style.set_properties(**{'text-align': 'center'}), height=400, use_container_width=True)
             else:
                 st.error("❌ Employee ID not found! Please check and try again.")
         else:
