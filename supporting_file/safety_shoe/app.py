@@ -117,7 +117,7 @@ try:
 
                 # Calculate duration in years, months, days
                 today = pd.Timestamp.today().normalize()
-                filtered_df["Duration"] = filtered_df["Date"].apply(lambda x: relativedelta(today, x))
+                filtered_df["Duration"] = filtered_df["Date"].apply(lambda x: relativedelta(bd_time.date(), x))
 
                 # Format duration as 'X years X months X days'
                 filtered_df["Duration"] = filtered_df["Duration"].apply(
