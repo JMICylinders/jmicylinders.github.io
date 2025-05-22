@@ -70,9 +70,6 @@ try:
             h3 {
                 font-size: 1.2rem;
             }
-            .stTextInput > div > div > input {
-                font-size: 16px;
-            }
             .safety-care-title {
                 font-size: 1.5rem !important;
                 font-weight: bold;
@@ -87,7 +84,6 @@ try:
         """,
         unsafe_allow_html=True,
     )
-
 
     # Show Title and Current Date (BD Time)
     bd_time = datetime.now(timezone.utc) + timedelta(hours=6)
@@ -115,8 +111,10 @@ try:
                 # Convert 'Date' to datetime
                 filtered_df["Date"] = pd.to_datetime(filtered_df["Date"], errors="coerce")
 
+                # Sort by Date descending (latest at top)
+                filtered_df = filtered_df.sort_values(by="Date", ascending=False)
+
                 # Calculate duration in years, months, days
-                today = pd.Timestamp.today().normalize()
                 filtered_df["Duration"] = filtered_df["Date"].apply(lambda x: relativedelta(bd_time.date(), x))
 
                 # Format duration as 'X years X months X days'
@@ -153,5 +151,3 @@ try:
 except Exception as e:
     st.error("❌ Failed to load data from Google Sheets.")
     st.exception(e)
-
-
