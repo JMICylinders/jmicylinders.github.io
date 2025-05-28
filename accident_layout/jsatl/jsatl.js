@@ -8,10 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
             
         ],
         march: [
-            { x: 690, y: 165, type: "hand", name: "Md.Rofiqul Islam", id: "26063010", accident: "Small Cut While Handling Cylinder",status:"Minor" },
-            { x: 800, y: 100, type: "foot", name: "Choton Borua", id: "26090195", accident: "Hit By A Cylinder by Another Worker",status:"Minor"  },
-            { x: 800, y: 300, type: "foot", name: "Sadek Ali", id: "", accident: "Hit By A Cylinder ",status:"Minor"  },
-            { x: 600, y: 300, type: "foot", name: "Md. Kawser Rahman", id: "26090256", accident: "Hit By A Cylinder by Another Worker",status:"Minor"  }
+            
+        ],
+
+        may: [
+            { x: 70, y: 350, type: "hand", name: "Sowkat Hossain Rabbi", id: "26081032", accident: "Struck by hammer by mistake",status:"Minor" },
+            { x: 70, y: 315, type: "hand", name: "Md. Rabby Sarder", id: "26081014", accident: "Hit By A Cylinder ",status:"Minor"  },
+            { x: 495, y: 100, type: "hand", name: "Md. Nasim Hossain", id: "26090110", accident: "Got scratch while tighting a screw ",status:"Minor"  },
+            
         ],
     };
 
@@ -113,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
             marker.style.left = `${markerX}px`;
 
             const markerImage = document.createElement("img");
-            markerImage.src = `icons/${accident.type}.png`;
+            markerImage.src = `../icons/${accident.type}.png`;
             markerImage.alt = accident.accident;
             marker.appendChild(markerImage);
             imageContainer.appendChild(marker);
