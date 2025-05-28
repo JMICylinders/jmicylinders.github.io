@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
             { x: 600, y: 300, type: "foot", name: "Md. Kawser Rahman", id: "26090256", accident: "Hit By A Cylinder by Another Worker",status:"Minor"  }
         ],
         may: [
-            { x: 690, y: 190, type: "eye", name: "Md. Billal Mia", id: "26090203", accident: "burned waste (heat treatment) enter into the eye",status:"Minor" },
+            { x: 690, y: 190, type: "eye", name: "Md. Billal Mia", id: "26090203", accident: "burned color waste (heat treatment) enter into the eye",status:"Minor" },
             { x: 550, y: 450, type: "hand", name: "Mohi Uddin", id: "26090169", accident: "Hit By A Cylinder by Another Worker",status:"Minor"  },
             { x: 950, y: 300, type: "foot", name: "Md. Jahed Hasan", id: "26086002", accident: "Hit By A Cylinder ",status:"Minor"  },
-            { x: 820, y: 300, type: "eye", name: "Md. Najam Uddin", id: "26090132", accident: "Hit By shot near shot blasting machine",status:"Minor"  },
+            { x: 820, y: 300, type: "eye", name: "Md. Najam Uddin", id: "26090132", accident: "Dust particle enter into the eye",status:"Minor"  },
             { x: 800, y: 100, type: "hand", name: "Md. Rasel", id: "26090047", accident: "Burn in hand while loading in heat treatment",status:"Minor"  }
         ],
     };
