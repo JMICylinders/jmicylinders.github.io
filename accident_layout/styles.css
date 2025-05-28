@@ -92,6 +92,7 @@ button:hover {
     overflow: hidden;    /* ✅ Prevent content overflow */
     text-align: left;
     white-space: normal;
+    
     word-wrap: break-word;
 }
 
