@@ -87,11 +87,14 @@ button:hover {
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     font-size: 14px;
-    max-width: 500px;
+    width: 220px;        /* ✅ Fixed width */
+    height: 100px;       /* ✅ Fixed height */
+    overflow: hidden;    /* ✅ Prevent content overflow */
     text-align: left;
-    
-    
+    white-space: normal;
+    word-wrap: break-word;
 }
+
 
 /* Heatmap Canvas */
 .heatmap-canvas {
