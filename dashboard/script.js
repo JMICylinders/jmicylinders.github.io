@@ -1,4 +1,7 @@
-document.getElementById('month-select').addEventListener('change', function() {
+const monthSelect = document.getElementById('month-select');
+monthSelect.value = "";  // Clear selection on page load
+
+monthSelect.addEventListener('change', function() {
     const selectedMonth = this.value;
 
     const monthNames = {
