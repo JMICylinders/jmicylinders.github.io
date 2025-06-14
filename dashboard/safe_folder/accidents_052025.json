@@ -1,0 +1,125 @@
+{
+"month": "May 2025",
+  "summary": {
+    "total_incidents": 13,
+    "ltifr": 88,
+    "near_miss_reports": 0,
+    "safety_trainings_conducted": 4
+  },
+  "incident_trend": [
+    { "day": 1},
+    { "day": 2},
+    { "day": 3},
+    { "day": 4},
+    { "day": 5},
+    { "day": 6},
+    { "day": 7}
+  ],
+  "incident_reports": [
+    {
+  "date": "2025-05-04",
+  "name": "Belal Hossen",
+  "category": "Eye ",
+  "plant": "CMP",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-04",
+  "name": "Sowkat Hossen",
+  "category": "Hand",
+  "plant": "Auto Tank",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-06",
+  "name": "Rabbi Sardar",
+  "category": "Hand",
+  "plant": "Auto Tank",
+  "department": "Painting",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-07",
+  "name": "Md. Nasim Hossain",
+  "category": "Hand",
+  "plant": "Auto Tank",
+  "department": "Quality",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-08",
+  "name": "Raihan",
+  "category": "Hand",
+  "plant": "CMP",
+  "department": "Engineering",
+  "severity": "Medium"
+ },
+ {
+  "date": "2025-05-10",
+  "name": "Mohiuddin ",
+  "category": "Hand",
+  "plant": "CMP",
+  "department": "Painting",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-12",
+  "name": "Jasid Hassan",
+  "category": "leg",
+  "plant": "CMP",
+  "department": "Painting",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-12",
+  "name": "Sowkat Hossen",
+  "category": "leg",
+  "plant": "Auto Tank",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-12",
+  "name": "Osman Raruk",
+  "category": "Hand",
+  "plant": "Auto Tank",
+  "department": "Forming",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-17",
+  "name": "Nizam Uddin",
+  "category": "Eye ",
+  "plant": "CMP",
+  "department": "Quality",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-17",
+  "name": "Nur Uddin",
+  "category": "Eye ",
+  "plant": "CMP",
+  "department": "Painting",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-20",
+  "name": "Kawser miah",
+  "category": "Eye ",
+  "plant": "CMP",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-05-26",
+  "name": "Ashraful Pramanik",
+  "category": "Hand",
+  "plant": "CMP",
+  "department": "Weding",
+  "severity": "Low"
+ }
+
+  ]
+}
