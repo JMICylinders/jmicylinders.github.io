@@ -17,7 +17,7 @@
       <option value="" selected disabled>-- Select a Month --</option>
       <option value="04">April</option>
       <option value="05">May</option>
-      <option value="06">June</option>
+      
     </select>
   </div>
   
