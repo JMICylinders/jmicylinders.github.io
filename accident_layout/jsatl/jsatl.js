@@ -1,37 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Accident data for each month
     const monthData = {
-        january: [
-            
-        ],
-        february: [
-            
-        ],
-        march: [
-            
-        ],
-
+        january: [],
+        february: [],
+        march: [],
         may: [
-            { x: 70, y: 350, type: "hand", name: "Sowkat Hossain Rabbi", id: "26081032", accident: "Struck by hammer by mistake",status:"Minor" },
-            { x: 70, y: 315, type: "hand", name: "Md. Rabby Sarder", id: "26081014", accident: "Hit By A Cylinder ",status:"Minor"  },
-            { x: 495, y: 100, type: "hand", name: "Md. Nasim Hossain", id: "26090110", accident: "Got scratch while tighting a screw ",status:"Minor"  },
-            
+            { x: 70, y: 350, type: "hand", name: "Sowkat Hossain Rabbi", id: "26081032", accident: "Struck by hammer by mistake", status: "Minor" },
+            { x: 70, y: 315, type: "hand", name: "Md. Rabby Sarder", id: "26081014", accident: "Hit By A Cylinder ", status: "Minor" },
+            { x: 495, y: 100, type: "hand", name: "Md. Nasim Hossain", id: "26090110", accident: "Got scratch while tighting a screw ", status: "Minor" },
         ],
     };
 
-    // Retrieve selected month from localStorage or default to January
-    let selectedMonth = localStorage.getItem("selectedMonth") || "january";
+    let selectedMonth = ""; // Start with no month selected
     let heatmapVisible = false;
 
-    // Set the dropdown to the saved value
-    document.getElementById("month").value = selectedMonth;
+    // Set dropdown to default empty option
+    document.getElementById("month").value = "";
 
-    // Function to update displayed markers
     function updateMarkers() {
         const accidentData = monthData[selectedMonth];
 
         if (!accidentData || accidentData.length === 0) {
             alert("No data available for " + selectedMonth);
+            clearMarkersAndTooltips();
             return;
         }
 
@@ -39,23 +29,25 @@ document.addEventListener("DOMContentLoaded", function () {
         displayMarkers(accidentData);
     }
 
-    // Event listener for selecting a month
     document.getElementById("month").addEventListener("change", function () {
         selectedMonth = document.getElementById("month").value;
-        localStorage.setItem("selectedMonth", selectedMonth); // Save selected month
-        updateMarkers(); // Update markers when a month is selected
+        if (selectedMonth !== "") {
+            updateMarkers();
+        } else {
+            clearMarkersAndTooltips();
+            clearHeatmap();
+        }
     });
 
-    // Event listener for toggling the heatmap
     document.getElementById("toggleHeatmap").addEventListener("click", function () {
         if (!heatmapVisible) {
             heatmapVisible = true;
-            const allAccidentData = Object.values(monthData).flat(); // Aggregate all months' data
+            const allAccidentData = Object.values(monthData).flat();
             generateHeatmap(allAccidentData);
         } else {
             heatmapVisible = false;
             clearHeatmap();
-            updateMarkers(); // Restore markers for selected month
+            if (selectedMonth !== "") updateMarkers();
         }
     });
 
@@ -70,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateHeatmap(accidentData) {
         const imageContainer = document.querySelector(".image-container");
-        clearHeatmap(); // Remove previous heatmap before adding a new one
+        clearHeatmap();
 
         const canvas = document.createElement("canvas");
         canvas.width = imageContainer.clientWidth;
@@ -90,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function drawHeatSpot(ctx, x, y) {
-        const innerRadius = 10, outerRadius = 40; // Increased radius for better visualization
+        const innerRadius = 10, outerRadius = 40;
         const gradient = ctx.createRadialGradient(x, y, innerRadius, x, y, outerRadius);
         gradient.addColorStop(0, "rgba(255, 0, 0, 0.5)");
         gradient.addColorStop(0.5, "rgba(255, 0, 0, 0.1)");
@@ -129,7 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
             tooltip.innerHTML = `<b>Name:</b> ${accident.name} <br><b>ID:</b> ${accident.id} <br><b>Accident:</b> ${accident.accident} <br><b>Status:</b> ${accident.status}`;
             imageContainer.appendChild(tooltip);
 
-            // Add click event to toggle tooltip visibility
             marker.addEventListener("click", () => {
                 const currentDisplay = tooltip.style.display;
                 tooltip.style.display = currentDisplay === "block" ? "none" : "block";
