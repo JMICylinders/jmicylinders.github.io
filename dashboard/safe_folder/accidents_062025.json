@@ -1,0 +1,101 @@
+{
+"month": "June 2025",
+  "summary": {
+    "total_incidents": 10,
+    "ltifr": 0,
+    "near_miss_reports": 2,
+    "safety_trainings_conducted": 0
+  },
+  "incident_trend": [
+    { "day": 1},
+    { "day": 2},
+    { "day": 3},
+    { "day": 4},
+    { "day": 5},
+    { "day": 6},
+    { "day": 7}
+  ],
+  "incident_reports": [
+    {
+  "date": "2025-06-12",
+  "name": "Tanvir Hossain",
+  "category": "Hand",
+  "plant": "Auto Tank",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-14",
+  "name": "Azu Molla",
+  "category": "leg",
+  "plant": "Auto Tank",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-15",
+  "name": "Abdur Razzak",
+  "category": "Hand",
+  "plant": "CMP",
+  "department": "Painting",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-15",
+  "name": "Mohiuddin ",
+  "category": "leg",
+  "plant": "CMP",
+  "department": "Painting",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-16",
+  "name": "Ibrahim",
+  "category": "Hand",
+  "plant": "CMP",
+  "department": "Finishing",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-23",
+  "name": "Md. Shahin Alam ",
+  "category": "Hand",
+  "plant": "Auto Tank",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-24",
+  "name": "Mofidul",
+  "category": "leg",
+  "plant": "CMP",
+  "department": "Weding",
+  "severity": "Medium"
+ },
+ {
+  "date": "2025-06-24",
+  "name": "Mobaraq Hossen",
+  "category": "Hand",
+  "plant": "CMP",
+  "department": "Weding",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-26",
+  "name": "Nur Uddin",
+  "category": "Hand",
+  "plant": "CMP",
+  "department": "Painting",
+  "severity": "Low"
+ },
+ {
+  "date": "2025-06-28",
+  "name": "Shakil Hossen",
+  "category": "hand",
+  "plant": "CMP",
+  "department": "Engineering",
+  "severity": "Low"
+ }
+
+  ]
+}
