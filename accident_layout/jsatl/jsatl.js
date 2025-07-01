@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
             { x: 70, y: 315, type: "hand", name: "Md. Rabby Sarder", id: "26081014", accident: "Hit By A Cylinder ", status: "Minor" },
             { x: 495, y: 100, type: "hand", name: "Md. Nasim Hossain", id: "26090110", accident: "Got scratch while tighting a screw ", status: "Minor" },
         ],
+        june: [
+            { x: 90, y: 150, type: "hand", name: "Mohammad Mobarak Hossen", id: "26084025", accident: "Abrasion in left hand while passing by scrap", status: "Minor" },
+            
+        ],
     };
 
     let selectedMonth = ""; // Start with no month selected
