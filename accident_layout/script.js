@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const monthData = {
-        january: [
-            { x: 800, y: 100, type: "foot", name: "Shakil", id: "12345", accident: "👣" },
-            { x: 400, y: 150, type: "hand", name: "Michael Smith", id: "54321", accident: "Hand Injury ✋" }
-        ],
+       
         february: [
             { x: 800, y: 290, type: "foot", name: "Shakil Ahammod", id: "26086005", accident: "👣" },
             { x: 200, y: 220, type: "eye", name: "Masum", id: "67890", accident: "Hand Injury ✋" },
@@ -19,8 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
             { x: 690, y: 190, type: "eye", name: "Md. Billal Mia", id: "26090203", accident: "burned color waste (heat treatment) enter into the eye",status:"Minor" },
             { x: 550, y: 450, type: "hand", name: "Mohi Uddin", id: "26090169", accident: "Hit By A Cylinder by Another Worker",status:"Minor"  },
             { x: 950, y: 300, type: "foot", name: "Md. Jahed Hasan", id: "26086002", accident: "Hit By A Cylinder ",status:"Minor"  },
-            { x: 820, y: 300, type: "eye", name: "Md. Najam Uddin", id: "26090132", accident: "Dust particle enter into the eye",status:"Minor"  },
+            { x: 820, y: 300, type: "eye", name: "Md. Nijam Uddin", id: "26090132", accident: "Dust particle enter into the eye",status:"Minor"  },
             { x: 800, y: 100, type: "hand", name: "Md. Rasel", id: "26090047", accident: "Burn in hand while loading in heat treatment",status:"Minor"  }
+        ],
+
+        june: [
+            
+            { x: 770, y: 300, type: "foot", name: "Mohi Uddin", id: "26090169", accident: "Cylinder fell on foot during handling",status:"Minor"  },
+            { x: 830, y: 290, type: "hand", name: "Md. Ibrahim", id: "26086006", accident: "Fingers get caught between two cylinders ",status:"Minor"  },
+            { x: 930, y: 290, type: "hand", name: "Nur Uddin", id: "26090239", accident: "Fingers get caught between two cylinders ",status:"Minor"  },
+            { x: 830, y: 135, type: "hand", name: "Shakil Hossain", id: "26070030", accident: "Got burn in hand while passing through hot cylinder",status:"Minor"},
+            { x: 430, y: 135, type: "foot", name: "Md. Mofidul Islam", id: "26090060", accident: "Fell outside (Water Filter pump room) and sustained leg injury",status:"Moderate"},
         ],
     };
 
