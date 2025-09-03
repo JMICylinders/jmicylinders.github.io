@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Extinguisher Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>🧯 Fire Extinguisher Quiz</h1>
+    <p class="tagline">Test your knowledge on fire extinguisher use</p>
+  </header>
 
+  <main class="course-content">
+    <section class="quiz-section">
+      <form id="quizForm">
+        
+        <div class="quiz-question">
+          <p>1. What does the "P" in the PASS technique stand for?</p>
+          <label><input type="radio" name="q1" value="a"> Push</label><br>
+          <label><input type="radio" name="q1" value="b"> Pull</label><br>
+          <label><input type="radio" name="q1" value="c"> Point</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>2. Which type of extinguisher is safe to use on electrical fires?</p>
+          <label><input type="radio" name="q2" value="a"> Water</label><br>
+          <label><input type="radio" name="q2" value="b"> Foam</label><br>
+          <label><input type="radio" name="q2" value="c"> CO₂</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>3. Where should you aim the nozzle of a fire extinguisher?</p>
+          <label><input type="radio" name="q3" value="a"> At the top of the flames</label><br>
+          <label><input type="radio" name="q3" value="b"> At the base of the fire</label><br>
+          <label><input type="radio" name="q3" value="c"> In the air above the fire</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>4. Before using an extinguisher, what should you always do first?</p>
+          <label><input type="radio" name="q4" value="a"> Call emergency services</label><br>
+          <label><input type="radio" name="q4" value="b"> Test the extinguisher on the ground</label><br>
+          <label><input type="radio" name="q4" value="c"> Check if it is heavy</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>5. After extinguishing the fire, what should you do?</p>
+          <label><input type="radio" name="q5" value="a"> Leave immediately without telling anyone</label><br>
+          <label><input type="radio" name="q5" value="b"> Report the fire and ensure it doesn’t restart</label><br>
+          <label><input type="radio" name="q5" value="c"> Throw away the extinguisher</label>
+        </div>
+
+        <button type="button" class="btn" onclick="checkQuiz()">Submit Quiz</button>
+      </form>
+
+      <p id="quizResult" class="quiz-result"></p>
+    </section>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
