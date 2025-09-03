@@ -21,6 +21,7 @@ function checkQuiz() {
   if (name) {
     fetch("https://script.google.com/macros/s/AKfycbxxjvLF4G0BhQfJUygzxncsmkemuKbnfiPnxkCNQM4_RtJWvbl19PA2YQ4XWb7ZDH-l/exec", {
       method: "POST",
+      mode: "no-cors",
       body: JSON.stringify({ name: name, score: score }),
       headers: { "Content-Type": "application/json" }
     })
@@ -29,3 +30,4 @@ function checkQuiz() {
     .catch(err => console.error(err));
   }
 }
+
